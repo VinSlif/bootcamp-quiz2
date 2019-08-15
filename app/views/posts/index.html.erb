@@ -1,0 +1,11 @@
+<%= simple_form_for Post.new do |f| %>
+	<%= f.input :message %>
+	<br />
+	<%= f.submit 'Create' %>
+<% end %>
+
+<br /><hr /><br />
+
+<% @posts.each do |post| %>
+	<p class="post"><span><%= post.id%>:</span> <%= post.message %></p>
+<% end %>
